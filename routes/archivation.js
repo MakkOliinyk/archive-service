@@ -1,3 +1,5 @@
+import { archiveFile, unarchiveFile } from '../utils';
+
 const fileRoutes = async (server, options) => {
     server.route({
         method: 'POST',
