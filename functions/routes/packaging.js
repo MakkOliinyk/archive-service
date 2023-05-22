@@ -1,6 +1,6 @@
-import { archiveFile, unarchiveFile } from '../utils';
+const { archiveFile, unarchiveFile } = require('../utils');
 
-const fileRoutes = async (server, options) => {
+const packagingRoutes = async (server) => {
     server.route({
         method: 'POST',
         path: '/archive',
@@ -22,4 +22,4 @@ const fileRoutes = async (server, options) => {
     });
 };
 
-export default fastifyPlugin(fileRoutes);
+module.exports = packagingRoutes;

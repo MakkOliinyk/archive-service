@@ -1,6 +1,6 @@
-import { createGzip, createGunzip } from 'zlib';
+const { createGzip, createGunzip } = require('zlib');
 
-export const archiveFile = (fileContent) => {
+const archiveFile = (fileContent) => {
     const gzip = createGzip();
 
     return new Promise((resolve, reject) => {
@@ -24,7 +24,7 @@ export const archiveFile = (fileContent) => {
     });
 };
 
-export const unarchiveFile = (fileContent) => {
+const unarchiveFile = (fileContent) => {
     const gunzip = createGunzip();
 
     return new Promise((resolve, reject) => {
@@ -47,3 +47,5 @@ export const unarchiveFile = (fileContent) => {
         gunzip.end();
     });
 };
+
+module.exports = { archiveFile, unarchiveFile };
