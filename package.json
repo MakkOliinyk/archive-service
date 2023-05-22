@@ -18,7 +18,6 @@
   "homepage": "https://github.com/MakkOliinyk/archive-service#readme",
   "dependencies": {
     "fastify": "^4.17.0",
-    "fastify-plugin": "^4.5.0",
-    "zlib": "^1.0.5"
+    "fastify-plugin": "^4.5.0"
   }
 }
