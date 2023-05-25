@@ -1,9 +1,8 @@
 const { createGzip, createGunzip } = require('zlib');
 
 const archiveFile = (fileContent) => {
-    const gzip = createGzip();
-
     return new Promise((resolve, reject) => {
+        const gzip = createGzip();
         const chunks = [];
 
         gzip.on('data', (chunk) => {
@@ -25,9 +24,8 @@ const archiveFile = (fileContent) => {
 };
 
 const unarchiveFile = (fileContent) => {
-    const gunzip = createGunzip();
-
     return new Promise((resolve, reject) => {
+        const gunzip = createGunzip();
         const chunks = [];
 
         gunzip.on('data', (chunk) => {
